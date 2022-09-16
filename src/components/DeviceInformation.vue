@@ -1,10 +1,33 @@
 <template>
   <div class="device-listing">
     <div id="device-info">
-      {{ device.name }}
+      <h1 style="font-size: 40px; padding: 0px; margin-bottom: -40px">
+        {{ device.name }}
+      </h1>
     </div>
-    <div id="device-actions">Device actions</div>
-    <div id="energy-info">Energy information</div>
+    <div id="container">
+      <div id="devices">
+        <div id="device-actions" style="margin-top: 10px; font-weight: bold">
+          Device Actions
+        </div>
+        <button style="margin: 10px">Toggle Lights</button>
+        <br /><br />Color<br /><input style="margin: 10px" type="color" />
+        <br /><br />Brightness<input
+          type="range"
+          min="0"
+          max="200"
+          value="100"
+        />
+      </div>
+      <div id="devices" style="margin-left: 20px">
+        <div id="device-actions" style="margin-top: 10px; font-weight: bold">
+          Device Information
+        </div>
+        <p>This device is pulling</p>
+        <div id="energy-info" style="margin: -10px">7.1 Watts</div>
+        <p>on its own.</p>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -61,5 +84,8 @@ h2 {
   font-family: "Javanese Text", sans-serif;
   font-size: 20px;
   text-shadow: 0px 2px white;
+}
+#device-info {
+  text-align: center;
 }
 </style>

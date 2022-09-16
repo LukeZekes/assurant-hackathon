@@ -14,15 +14,16 @@
           Manage
         </router-link>
       </div>
-      <button style="margin-top: 85px">Add Device</button>
+      <button style="margin-top: 15px">Add Device</button>
     </div>
     <div id="info-storage">
       <h1 class="usage-title">Energy Usage Information</h1>
       <hr />
       <br />
       <div class="info-container">
-        <p>Your combined devices are using a total of</p>
-        <div id="energy-info">(Energy Info)</div>
+        <p>Your combined devices are pulling a total of</p>
+        <div id="energy-info">7.9 Watts</div>
+        <p>from <b>3</b> total devices.</p>
       </div>
     </div>
   </div>
@@ -91,6 +92,10 @@ h2 {
   margin-left: 10px;
   padding: 10px;
   width: 500px;
+}
+#energy-info {
+  font-weight: bold;
+  font-size: 150%;
 }
 .info-container {
   margin-top: -20px;
