@@ -6,10 +6,10 @@
         v-for="(device, index) in devices"
         :key="index"
       >
-        Device {{ device }}
+        {{ device.name }}
         <router-link
           style="font-size: 15px; padding-left: 5px"
-          :to="{ name: 'deviceInformation', params: { id: device } }"
+          :to="{ name: 'deviceInformation', params: { id: device.id } }"
         >
           Manage
         </router-link>
@@ -42,7 +42,7 @@ export default {
     };
   },
   mounted() {
-    this.devices = this.$store.getters.getAllDeviceIds;
+    this.devices = this.$store.getters.getDeviceIdsAndNames;
   },
 };
 </script>
