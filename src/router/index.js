@@ -9,6 +9,7 @@ const routes = [
   },
   {
     path: "/devices/:id",
+    name: "deviceInformation",
     component: DeviceInformation,
     props: true,
   },
