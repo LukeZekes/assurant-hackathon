@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div id="device-info">Device information</div>
+    <div id="device-info">
+      {{ device }}
+    </div>
     <div id="device-actions">Device actions</div>
     <div id="energy-info">Energy information</div>
   </div>
@@ -8,9 +10,11 @@
 <script>
 export default {
   name: "DeviceInformation",
-  props: ["device"],
+  props: ["id"],
   data() {
-    return {};
+    return {
+      device: this.id,
+    };
   },
 };
 </script>
