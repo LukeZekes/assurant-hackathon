@@ -13,9 +13,10 @@ export default createStore({
   getters: {
     getAllDeviceIds(state) {
       let ids = [];
-      Array.forEach(state.devices, (dev) => {
+      state.devices.forEach((dev) => {
         ids.push(dev.id);
       });
+      return ids;
     },
     getDeviceById: (state) => (id) => {
       return state.devices.find((dev) => dev.id == id);
