@@ -24,7 +24,7 @@
           Device Information
         </div>
         <p>This device is pulling</p>
-        <div id="energy-info" style="margin: -10px">7.1 Watts</div>
+        <div id="energy-info" style="margin: -10px">{{device.watts}} Watts</div>
         <p>on its own.</p>
       </div>
     </div>

@@ -22,7 +22,7 @@
       <br />
       <div class="info-container">
         <p>Your combined devices are pulling a total of</p>
-        <div id="energy-info">7.9 Watts</div>
+        <div id="energy-info">22.5 Watts</div>
         <p>from <b>3</b> total devices.</p>
       </div>
     </div>
