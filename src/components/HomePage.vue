@@ -7,7 +7,10 @@
         :key="index"
       >
         Device {{ device }}
-        <router-link style="font-size: 15px; padding-left: 5px" to="/devices/1">
+        <router-link
+          style="font-size: 15px; padding-left: 5px"
+          :to="{ name: 'deviceInformation', params: { id: device } }"
+        >
           Manage
         </router-link>
       </div>
