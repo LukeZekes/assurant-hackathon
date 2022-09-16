@@ -8,6 +8,16 @@ export default createStore({
         name: "Light bulb",
         actions: [],
       },
+      {
+        id: 2,
+        name: "Light bulb",
+        actions: [],
+      },
+      {
+        id: 3,
+        name: "Light bulb",
+        actions: [],
+      },
     ],
   },
   getters: {
