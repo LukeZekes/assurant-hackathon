@@ -5,17 +5,17 @@ export default createStore({
     devices: [
       {
         id: 1,
-        name: "Light bulb",
+        name: "Light bulb - Kitchen",
         actions: [],
       },
       {
         id: 2,
-        name: "Light bulb",
+        name: "Light bulb - Front porch",
         actions: [],
       },
       {
         id: 3,
-        name: "Light bulb",
+        name: "Light bulb - Bedroom",
         actions: [],
       },
     ],
@@ -27,6 +27,13 @@ export default createStore({
         ids.push(dev.id);
       });
       return ids;
+    },
+    getDeviceIdsAndNames(state) {
+      let devices = [];
+      state.devices.forEach((dev) => {
+        devices.push({ id: dev.id, name: dev.name });
+      });
+      return devices;
     },
     getDeviceById: (state) => (id) => {
       return state.devices.find((dev) => dev.id == id);
