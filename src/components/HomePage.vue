@@ -10,8 +10,8 @@
         <router-link style="font-size: 15px; padding-left: 5px" to="/devices/1">
           Manage
         </router-link>
-        <button style="margin-top: 85px">Add Device</button>
       </div>
+      <button style="margin-top: 85px">Add Device</button>
     </div>
     <div id="info-storage">
       <h1 class="usage-title">Energy Usage Information</h1>
