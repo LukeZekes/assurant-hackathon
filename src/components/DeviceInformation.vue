@@ -2,7 +2,7 @@
   <div class="device-listing">
     <div id="device-info">
       <h1 style="font-size: 40px; padding: 0px; margin-bottom: -40px">
-        {{ device }}
+        {{ device.name }}
       </h1>
     </div>
     <div id="container">

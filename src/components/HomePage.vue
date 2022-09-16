@@ -13,7 +13,6 @@
         >
           Manage
         </router-link>
-          <br /><b>{{ device }} Watts</b>
       </div>
       <button style="margin-top: 15px">Add Device</button>
     </div>
@@ -95,8 +94,8 @@ h2 {
   width: 500px;
 }
 #energy-info {
-    font-weight:bold;
-    font-size:150%;
+  font-weight: bold;
+  font-size: 150%;
 }
 .info-container {
   margin-top: -20px;
