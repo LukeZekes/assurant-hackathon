@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div id="device-info"></div>
-    <div id="device-actions"></div>
-    <div id="energy-info"></div>
+    <div id="device-info">Device information</div>
+    <div id="device-actions">Device actions</div>
+    <div id="energy-info">Energy information</div>
   </div>
 </template>
 <script>

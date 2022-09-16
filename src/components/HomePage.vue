@@ -1,18 +1,17 @@
 <template>
   <div>
     <div id="devices">
-      <DeviceInformation v-for="(device, index) in devices" :key="index" />
+      <div class="device-listing">Device 1</div>
+      <div class="device-listing">Device 2</div>
+      <div class="device-listing">Device 3</div>
     </div>
-    <div id="energy-info"></div>
+    <div id="energy-info">Energy information</div>
   </div>
 </template>
 <script>
-import DeviceInformation from "./DeviceInformation.vue";
 export default {
   name: "HomePage",
-  components: {
-    DeviceInformation,
-  },
+  components: {},
   data() {
     return {
       devices: [],
