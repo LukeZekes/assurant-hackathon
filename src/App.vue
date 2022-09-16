@@ -1,6 +1,9 @@
 <template>
-  <header></header>
-  <router-view />
+    <div class="header" style="background-image:linear-gradient(#c9ffd8, #ffffff);">
+        <h1>[ The Greenhouse ]</h1>
+        <h2>Illustrating the energy cost of a connected, smarter world</h2>
+    </div>
+    <router-view />
 </template>
 
 <style lang="scss">
