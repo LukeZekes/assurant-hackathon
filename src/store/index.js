@@ -40,8 +40,12 @@ export default createStore({
     },
     getDeviceById: (state) => (id) => {
       let device = state.devices.find((dev) => dev.id == id);
-      console.log(device);
       return device;
+    },
+    getTotalWattage(state) {
+      let total = 0;
+      state.devices.forEach((dev) => (total += dev.watts));
+      return total;
     },
   },
   mutations: {

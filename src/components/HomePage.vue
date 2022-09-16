@@ -38,6 +38,7 @@ export default {
   data() {
     return {
       devices: [],
+      totalWattage: this.$store.getters.getTotalWattage,
     };
   },
   mounted() {
