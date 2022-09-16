@@ -36,7 +36,9 @@ export default createStore({
       return devices;
     },
     getDeviceById: (state) => (id) => {
-      return state.devices.find((dev) => dev.id == id);
+      let device = state.devices.find((dev) => dev.id == id);
+      console.log(device);
+      return device;
     },
   },
   mutations: {

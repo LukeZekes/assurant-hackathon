@@ -1,7 +1,7 @@
 <template>
   <div class="device-listing">
     <div id="device-info">
-      {{ device }}
+      {{ device.name }}
     </div>
     <div id="device-actions">Device actions</div>
     <div id="energy-info">Energy information</div>
@@ -13,7 +13,7 @@ export default {
   props: ["id"],
   data() {
     return {
-      device: this.id,
+      device: this.$store.getters.getDeviceById(this.id),
     };
   },
 };
