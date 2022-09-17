@@ -1,22 +1,20 @@
 <template>
+  <h1
+    style="
+      font-size: 40px;
+      padding: 0px;
+      margin-bottom: -40px;
+      font-family: 'Poppins', sans-serif;
+    "
+  >
+    {{ device.name }}
+  </h1>
   <div class="device-listing">
-    <div id="device-info">
-      <h1
-        style="
-          font-size: 40px;
-          padding: 0px;
-          margin-bottom: -40px;
-          font-family: 'Poppins', sans-serif;
-        "
-      >
-        {{ device.name }}
-      </h1>
-    </div>
+    <div id="device-info"></div>
     <div id="container">
       <div id="devices">
-        <div id="device-actions" style="margin-top: 10px; font-weight: bold">
-          Device Actions
-        </div>
+        <h1 class="usage-title">Device Actions</h1>
+
         <button style="margin: 10px">Toggle Lights</button>
         <br /><br />Color<br /><br /><input type="color" />
         <br /><br />Brightness<input
@@ -27,14 +25,15 @@
         />
       </div>
       <div id="devices" style="margin-left: 20px">
-        <div id="device-actions" style="margin-top: 10px; font-weight: bold">
-          Device Information
-        </div>
+        <h1 class="usage-title">Device Information</h1>
+
         <p>This device is pulling</p>
         <div id="energy-info" style="margin: -10px">
           <b>{{ device.watts }}</b> Watts
         </div>
         <p>on its own.</p>
+        <hr style="text-shadow: none; color: black" />
+        <p style="">Comparison</p>
         <div id="graph" style="text-shadow: none">
           <div
             class="graph-flex"
@@ -65,21 +64,6 @@
             </div>
           </div>
         </div>
-        <!-- <div id="graph">
-          <div
-            class="graph-item"
-            v-for="(data, index) in sortedComparisonData"
-            :key="index"
-          >
-            <div
-              class="graph-bar"
-              :style="{ height: getBarHeight(data[1]) + 'px' }"
-            ></div>
-            <div class="graph-label">
-              {{ data[0] }}
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -93,11 +77,6 @@ export default {
       device: this.$store.getters.getDeviceById(this.id),
       comparisonData: this.$store.state.comparisonData,
     };
-  },
-  mounted() {
-    // var container = document.getElementById("graph");
-    // var labels = document.getElementById("labels");
-    // var dnl = container.getElementsByTagName("li");
   },
   computed: {
     sortedComparisonData() {
@@ -167,7 +146,7 @@ h2 {
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
-  width: 250px;
+  width: 400px;
   height: auto;
   border-style: none groove;
   border-radius: 5px;
@@ -202,5 +181,15 @@ h2 {
 }
 #device-info {
   text-align: center;
+}
+#energy-info {
+  font-weight: bold;
+  font-size: 150%;
+}
+.usage-title {
+  font-family: "Poppins", sans-serif;
+  margin-top: 0px;
+  font-size: 25px;
+  border-bottom: black 2px solid;
 }
 </style>

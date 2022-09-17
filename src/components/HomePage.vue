@@ -1,28 +1,33 @@
 <template>
+  <h1
+    style="
+      font-size: 40px;
+      padding: 0px;
+      margin-bottom: -40px;
+      font-family: 'Poppins', sans-serif;
+    "
+  >
+    Home
+  </h1>
   <div id="container">
     <div id="devices">
+      <h1 class="usage-title">Devices</h1>
       <div
         class="device-listing"
         v-for="(device, index) in devices"
         :key="index"
+        @click="routeToDeviceInfo(device.id)"
       >
         {{ device.name }}
-        <router-link
-          style="font-size: 15px; padding-left: 5px"
-          :to="{ name: 'deviceInformation', params: { id: device.id } }"
-        >
-          Manage
-        </router-link>
       </div>
-      <button style="margin-top: 15px">Add Device</button>
+      <div class="device-listing">Add Device</div>
     </div>
     <div id="info-storage">
       <h1 class="usage-title">Energy Usage Information</h1>
-      <hr />
       <br />
       <div class="info-container">
         <p>Your combined devices are pulling a total of</p>
-        <div id="energy-info">{{totalWattage}} Watts</div>
+        <div id="energy-info">{{ totalWattage }} Watts</div>
         <p>from <b>3</b> total devices.</p>
       </div>
     </div>
@@ -43,6 +48,11 @@ export default {
   },
   mounted() {
     this.devices = this.$store.getters.getDeviceIdsAndNames;
+  },
+  methods: {
+    routeToDeviceInfo(id) {
+      this.$router.push({ name: "deviceInformation", params: { id } });
+    },
   },
 };
 </script>
@@ -71,6 +81,7 @@ h2 {
 }
 .usage-title {
   margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 25px;
 }
 #devices {
@@ -78,12 +89,14 @@ h2 {
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
-  width: 250px;
-  height:auto;
+  width: 400px;
+  height: auto;
   border-style: none groove;
   border-radius: 5px;
-  padding-bottom:10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
+
 #container {
   display: flex;
   justify-content: center;
@@ -109,8 +122,16 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   text-shadow: 0px 2px white;
-
-  display:flex;
+  border-bottom: black 1px solid;
+  display: flex;
+  background-color: none;
+  cursor: pointer;
+}
+.device-listing:hover {
+  background-color: #aafcc1;
+}
+.device-listing:active {
+  background-color: #92fcb0;
 }
 .bottom {
   position: fixed;
