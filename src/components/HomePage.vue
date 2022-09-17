@@ -22,7 +22,7 @@
       <br />
       <div class="info-container">
         <p>Your combined devices are pulling a total of</p>
-        <div id="energy-info">7.9 Watts</div>
+        <div id="energy-info">{{totalWattage}} Watts</div>
         <p>from <b>3</b> total devices.</p>
       </div>
     </div>
@@ -46,9 +46,10 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 html,
 body {
+  font-family: "Poppins", sans-serif;
   height: 100%;
   width: 100%;
   margin-top: -17px;
@@ -56,13 +57,13 @@ body {
   line-height: 1.5;
 }
 h1 {
-  font-family: "Javanese Text", sans-serif;
-  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 55px;
   padding: 10px;
   text-shadow: 0px 2px #a0d99c;
 }
 h2 {
-  font-family: "Javanese Text", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 90%;
   text-shadow: 0px 2px #dadada;
@@ -78,9 +79,10 @@ h2 {
   padding-right: 10px;
   text-align: center;
   width: 250px;
-  height: 350px;
+  height:auto;
   border-style: none groove;
   border-radius: 5px;
+  padding-bottom:10px;
 }
 #container {
   display: flex;
@@ -104,9 +106,11 @@ h2 {
 .device-listing {
   padding: 20px;
   text-align: left;
-  font-family: "Javanese Text", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   text-shadow: 0px 2px white;
+
+  display:flex;
 }
 .bottom {
   position: fixed;
