@@ -110,6 +110,9 @@ export default {
   margin-left: auto;
   margin-right: auto;
   text-shadow: none;
+  padding-left: 5px;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 div.graph-label {
   display: inline-block;
