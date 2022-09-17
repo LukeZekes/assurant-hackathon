@@ -22,6 +22,12 @@ export default createStore({
         watts: 7.5,
       },
     ],
+    comparisonData: {
+      lightbulbs: {
+        Halogen: 50,
+        "Incand-escent": 60,
+      },
+    },
   },
   getters: {
     getAllDeviceIds(state) {
