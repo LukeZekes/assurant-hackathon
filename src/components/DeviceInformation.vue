@@ -1,28 +1,39 @@
 <template>
   <div class="device-listing">
     <div id="device-info">
-      <h1 style="font-size: 40px; padding: 0px; margin-bottom: -40px; font-family:'Poppins', sans-serif;">
+      <h1
+        style="
+          font-size: 40px;
+          padding: 0px;
+          margin-bottom: -40px;
+          font-family: 'Poppins', sans-serif;
+        "
+      >
         {{ device.name }}
       </h1>
     </div>
     <div id="container">
-        <div id="devices">
-            <div id="device-actions" style="margin-top: 10px; font-weight: bold">
-                Device Actions
-            </div>
-            <button style="margin: 10px">Toggle Lights</button>
-            <br /><br />Color<br /><br/><input type="color" />
-            <br /><br />Brightness<input type="range"
-                                         min="0"
-                                         max="200"
-                                         value="100" />
+      <div id="devices">
+        <div id="device-actions" style="margin-top: 10px; font-weight: bold">
+          Device Actions
         </div>
+        <button style="margin: 10px">Toggle Lights</button>
+        <br /><br />Color<br /><br /><input type="color" />
+        <br /><br />Brightness<input
+          type="range"
+          min="0"
+          max="200"
+          value="100"
+        />
+      </div>
       <div id="devices" style="margin-left: 20px">
         <div id="device-actions" style="margin-top: 10px; font-weight: bold">
           Device Information
         </div>
         <p>This device is pulling</p>
-        <div id="energy-info" style="margin: -10px"><b>{{device.watts}}</b> Watts</div>
+        <div id="energy-info" style="margin: -10px">
+          <b>{{ device.watts }}</b> Watts
+        </div>
         <p>on its own.</p>
         <div id="graph" style="text-shadow: none">
           <div
@@ -157,10 +168,10 @@ h2 {
   padding-right: 10px;
   text-align: center;
   width: 250px;
-  height:auto;
+  height: auto;
   border-style: none groove;
   border-radius: 5px;
-  padding-bottom:10px;
+  padding-bottom: 10px;
 }
 #container {
   display: flex;
@@ -168,10 +179,19 @@ h2 {
   padding-top: 50px;
 }
 #colorCanvas {
-    border-radius:50%;
-    background-image: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
-    border-style: groove;
-    cursor: pointer;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  border-style: groove;
+  cursor: pointer;
 }
 .device-listing {
   padding: 20px;
